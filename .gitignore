@@ -1,0 +1,25 @@
+# Fișiere de configurare IDE (previne erorile de permisiune la Git add)
+.vs/
+.idea/
+*.slnx
+*.suo
+
+# Python
+__pycache__/
+*.pyc
+temp_*
+.env
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# Dataset-uri mari (nu se urcă pe GitHub)
+D:/Dataset_Daune/
+roboflow_dataset/
+
+# Fisiere masive si dataset-uri
+*.zip
+Car-Damage-Recognition-2/
+Dataset_Daune/
