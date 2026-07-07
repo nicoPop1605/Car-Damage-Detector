@@ -11,6 +11,8 @@ The app uses a custom YOLOv8 model to identify exactly which parts are damaged, 
 - **Object Detection:** Custom-trained YOLOv8 model that identifies specific damaged parts (e.g., front bumper, headlights, doors).
 - **Dynamic Bounding Boxes:** The React frontend receives normalized coordinates from the API and dynamically draws boxes over the image without modifying the original file.
 - **Smart Pricing Engine:** Repair costs aren't static. A damaged 2024 BMW costs more to fix than a 2010 Dacia. The backend adjusts base prices on the fly using a multiplier matrix.
+- **See claim history**
+- **Download a PDF raport** 
 - **Database Integration:** Base prices for each car part are pulled directly from a local Microsoft SQL Server database.
 - **UI:** Clean, responsive interface built with React and TypeScript, handling async API calls and state management.
 
@@ -32,6 +34,8 @@ The app uses a custom YOLOv8 model to identify exactly which parts are damaged, 
 3. **Database Query:** The backend queries the SQL Server to find the base replacement/repair cost for the detected parts.
 4. **Dynamic Calculation:** The pricing engine applies multipliers based on the brand (luxury vs. budget) and the year (newer cars have more sensors/complex parts).
 5. **Render:** The frontend receives the JSON response, lists the itemized bill, and draws the bounding boxes directly on the user's screen.
+6. **PDF:** The user can download a pdf raport
+7. **History:** The user can see the claim in the History section
 
 ---
 
