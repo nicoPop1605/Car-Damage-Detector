@@ -12,14 +12,10 @@ def main():
     print(f"Dataset descărcat cu succes în: {dataset.location}")
     print("\n=== PASUL 2: Antrenarea Modelului AI ===")
     
-    # Încărcăm arhitectura de bază YOLOv8
     model = YOLO('yolov8s.pt')
     
-    # dataset.location conține automat calea corectă către folderul descărcat!
     yaml_path = f"{dataset.location}/data.yaml"
     
-    # Pornim antrenamentul cu setările pentru clase dezechilibrate
-   # Pornim antrenamentul cu setările standard (datele au fost deja augmentate în Roboflow)
     results = model.train(
         data=yaml_path,
         epochs=50,                  
